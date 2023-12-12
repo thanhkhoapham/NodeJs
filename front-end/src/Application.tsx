@@ -7,16 +7,27 @@ import { Category } from "./page/Category";
 
 const { Header, Content } = Layout;
 
+const items = [
+  {
+    key: "home",
+    label: <Link href="/">Home</Link>
+  },
+  {
+    key: "category",
+    label: <Link href="/catagory">Category</Link>
+  }
+]
+
 const Application: React.FC = () => {
     return <Layout className="body-wrapper">
         <Header>
-          <Menu theme="dark" mode="horizontal" >
-            <Menu.Item key="home">
+          <Menu theme="dark" mode="horizontal" items={items}>
+            {/* <Menu.Item key="home">
               <Link href="/">Home</Link>
             </Menu.Item>
             <Menu.Item key="catagory">
               <Link href="/catagory">Category</Link>
-            </Menu.Item>
+            </Menu.Item> */}
           
           </Menu>
         </Header>
